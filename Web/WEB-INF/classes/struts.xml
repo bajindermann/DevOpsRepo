@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.multipart.maxSize" value="2020401" /> 
+	<package  name="default" extends="tiles-default">
+<interceptors>
+ <interceptor name="security"
+				class="com.consulting.action.interceptor.Security" />
+	</interceptors>
+	<action name="Weather" class="com.consulting.action.WeatherAction">
+			<interceptor-ref name="security" />
+			<interceptor-ref name="defaultStack" />
+			<result name="error">/home.jsp</result>
+			<param name="menu">Weather</param>
+			<result name="input">/home.jsp</result>
+			<result name="success" type="tiles">success.def</result>
+			<result name="weatherforecasthour" type="tiles">weatherforecast.def</result>
+			<result name="wxhistoricalday" type="tiles">wxhistoricalday.def</result>
+			<result name="wxhistoricalhour" type="tiles">wxhistoricalhour.def</result>
+			<result name="currentwxdata" type="tiles">currentwxdata.def</result>			 
+		</action>
+	<action name="Login" class="com.consulting.action.LoginAction">
+			<interceptor-ref name="security" />
+			<interceptor-ref name="defaultStack" />
+			<result name="error">/home.jsp</result>
+			<param name="menu">Login</param>
+			<result name="input">/home.jsp</result>
+			<result name="loginsuccess" type="tiles">loginsuccess.def</result>
+			<result name="adduser" type="tiles">adduser.def</result>
+			<result name="viewuser" type="tiles">viewuser.def</result>	
+			<result name="edituser" type="tiles">edituser.def</result>
+			<result name="home" type="tiles">loginsuccess.def</result>
+			<result name="changepassword" type="tiles">changepassword.def</result>
+      </action>
+      
+      <action name="Changepassword" class="com.consulting.action.ChangePassAction">
+			<interceptor-ref name="security" />
+			<interceptor-ref name="defaultStack" />
+			<result name="error">/home.jsp</result>
+			<param name="menu">Changepassword</param>
+			<result name="input" type="tiles">changepassword.def</result>	 
+            <result name="success" type="tiles">changepassword.def</result>
+             <result name="passwordupdated">/home.jsp</result>
+			
+								 
+		</action>
+		
+		
+		<action name="User" class="com.consulting.action.UserAction">
+			<interceptor-ref name="security" />
+			<interceptor-ref name="defaultStack" />
+			<result name="error">/home.jsp</result>
+			<param name="menu">user</param>
+			<result name="input" type="tiles">adduser.def</result>
+			<result name="adduser" type="tiles">adduser.def</result>			 
+		</action>
+		<action name="logoff"
+			class="com.consulting.action.LogOffAction">
+			<interceptor-ref name="security" />
+			<interceptor-ref name="defaultStack" />
+			<!--
+			<result type="tiles">login.def</result>
+			-->
+			<result name="success">/home.jsp</result>
+		</action>
+		
+	
+ </package>
+</struts>

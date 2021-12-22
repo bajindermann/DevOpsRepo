@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<log4j:configuration>
+<appender name="file"
+class="org.apache.log4j.RollingFileAppender">
+<param name="maxFileSize" value="1024KB" />
+<param name="maxBackupIndex" value="5" />
+<param name="File" value="/logs/local" />
+<param name="threshold" value="info"/>
+<param name="DatePattern" value="'.'yyyy-MM-dd"/>
+<layout class="org.apache.log4j.PatternLayout">
+<param name="ConversionPattern"
+value="%d{ABSOLUTE} %5p %c{1}:%L - %m%n" />
+</layout>
+</appender>
+<!--
+<appender name="mail" class="org.apache.log4j.net.SMTPAppender">
+<param name="SMTPHost" value="smtp.myservername.xx" />
+<param name="From" value="email@fromemail.xx" />
+<param name="To" value="toemail@toemail.xx" />
+<param name="Subject" value="[LOG] ..." />
+<param name="BufferSize" value="1" />
+<param name="threshold" value="error" />
+<layout class="org.apache.log4j.PatternLayout">
+<param name="ConversionPattern"
+value="%d{ABSOLUTE} %5p %c{1}:%L - %m%n" />
+</layout>
+</appender>
+-->
+<root>
+<priority value="debug"></priority>
+<appender-ref ref="file" />
+<!--<appender-ref ref="mail"/>
+--></root>
+</log4j:configuration>

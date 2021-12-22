@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.multipart.maxSize" value="2020401" /> 
+	<package  name="default" extends="tiles-default">
+<interceptors>
+ <interceptor name="security"
+				class="com.consulting.action.interceptor.Security" />
+					</interceptors>
+	 
+	<action name="Login" class="com.consulting.action.LoginAction">
+			<interceptor-ref name="security" />
+			<interceptor-ref name="token"></interceptor-ref>
+			<interceptor-ref name="defaultStack" />				 		 
+			<result name="error">/home.jsp</result>
+			<param name="menu">Login</param>
+			<param name="url">viewuser</param>
+			<param name="parse">true</param>
+            <param name="encode">true</param>
+			<result name="invalid.token" type="tiles">invalid_token.def</result>	
+			<result name="input">/home.jsp</result>            
+			<result name="viewuser" type="tiles">viewuser.def</result>	
+			<result name="edituser" type="tiles">edituser.def</result>
+			<result name="updateuser" type="redirectAction">
+            <param name="actionName">updateuser</param>
+            </result>					
+      </action>
+       
+              
+      
+      <action name="Loginaction" class="com.consulting.action.LoginAction">
+			<interceptor-ref name="security" />
+			<interceptor-ref name="defaultStack" />	
+			 	 
+			<result name="error">/home.jsp</result>
+			<param name="menu">Login</param>
+			<param name="parse">true</param>
+            <param name="encode">true</param>
+			<result name="input">/home.jsp</result>	
+			<result name="loginsuccess">/home.jsp</result>			 	 
+			 
+             
+            </action>
+      
+      
+		<action name="logoff"
+			class="com.consulting.action.LogOffAction">
+			 <interceptor-ref name="security" />
+			<interceptor-ref name="defaultStack" />
+			 <result name="success">/home.jsp</result>	
+			 <result name="input">/home.jsp</result>
+			 <result name="error">/home.jsp</result>			 
+		</action>
+	</package>
+</struts>

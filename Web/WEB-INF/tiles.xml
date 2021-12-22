@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+ <tiles-definitions>
+ <definition name="input.def"
+		template="/jsp/common/layout.jsp">
+		<put-attribute name="title" value="Login " type="string" />
+		<put-attribute name="body" value="/home.jsp" />		 
+	</definition>
+ 
+ <definition name="mainlayout.def"
+		template="/jsp/common/layout.jsp">
+		<put-attribute name="title" value="Login Successfully"
+			type="string" />
+		<put-attribute name="header" value="/jsp/common/header.jsp" />
+		<put-attribute name="leftsidebar" value="/jsp/common/leftsidebar.jsp" />
+		<put-attribute name="body" value="/jsp/common/body.jsp" />				 
+	 </definition>
+	 
+	 <definition name="success.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/weather/wxforecastday.jsp" />
+	</definition>
+	<definition name="weatherforecast.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/weather/wxforecasthour.jsp" />
+	</definition>
+	<definition name="wxhistoricalday.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/weather/wxhistoricalday.jsp" />
+	</definition>
+	<definition name="wxhistoricalhour.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/weather/wxhistoricalhour.jsp" />
+	</definition>
+	<definition name="currentwxdata.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/weather/currentwxdata.jsp" />
+	</definition>
+	
+	<definition name="adduser.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/user/adduser.jsp" />
+	</definition>
+	<definition name="viewuser.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/user/viewuser.jsp" />
+	</definition>
+	<definition name="edituser.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/user/edituser.jsp" />
+	</definition>
+	
+	<definition name="addpo.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/workorder/addpo.jsp" />
+	</definition>
+	
+	<definition name="viewpo.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/workorder/viewpo.jsp" />
+	</definition>
+	
+		<definition name="saveoemdetails.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/oem/addoem.jsp" />
+	</definition>
+	
+	<definition name="viewoemdetails.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/oem/viewoem.jsp" />
+	</definition>
+	
+	 <definition name="loginsuccess.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/common/dashboard.jsp" />
+	</definition>
+	 <definition name="invalid_token.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/common/invalid_token.jsp" />
+	</definition>
+	
+	<definition name="showupload.def"
+		template="/jsp/common/commonlayout.jsp">
+		<put-attribute name="title" value="Upload File" type="string" />
+		<put-attribute name="body" value="/jsp/common/fileupload.jsp" />
+	</definition>
+	<definition name="showuploadpbg.def"
+		template="/jsp/common/commonlayout.jsp">
+		<put-attribute name="title" value="Upload File" type="string" />
+		<put-attribute name="body" value="/jsp/common/fileuploadpbg.jsp" />
+	</definition>
+	<definition name="showuploadimp.def"
+		template="/jsp/common/commonlayout.jsp">
+		<put-attribute name="title" value="Upload File" type="string" />
+		<put-attribute name="body" value="/jsp/common/fileuploadimp.jsp" />
+	</definition>
+	<definition name="showuploadsuccess.def"
+		template="/jsp/common/commonlayout.jsp">
+		<put-attribute name="title" value="Upload File" type="string" />
+		<put-attribute name="body"
+			value="/jsp/common/fileuploadsuccess.jsp" />
+	</definition>
+ <definition name="showuploadsuccesspbg.def"
+		template="/jsp/common/commonlayout.jsp">
+		<put-attribute name="title" value="Upload File" type="string" />
+		<put-attribute name="body"
+			value="/jsp/common/fileuploadsuccesspbg.jsp" />
+	</definition>
+	
+	<definition name="showuploadsuccessimp.def"
+		template="/jsp/common/commonlayout.jsp">
+		<put-attribute name="title" value="Upload File" type="string" />
+		<put-attribute name="body"
+			value="/jsp/common/fileuploadsuccessimp.jsp" />
+	</definition>
+	<definition name="showpbg.def"
+		template="/jsp/common/commonlayout.jsp">
+		<put-attribute name="title" value="Upload File" type="string" />
+		<put-attribute name="body"
+			value="/jsp/workorder/showpbg.jsp" />
+	</definition>
+	<definition name="showoemdetails.def"
+		template="/jsp/common/commonlayout.jsp">
+		<put-attribute name="title" value="Upload File" type="string" />
+		<put-attribute name="body"
+			value="/jsp/workorder/showoemdetails.jsp" />
+	</definition>
+	
+	<definition name="showpodetails.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Govt-Sales"
+			type="string" />
+		<put-attribute name="body" value="/jsp/workorder/showpodetails.jsp" />
+	</definition>
+	<definition name="showpbgdetails.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Govt-Sales"
+			type="string" />
+		<put-attribute name="body" value="/jsp/pbg/showpbgdetails.jsp" />
+	</definition>
+	
+	<definition name="pendingVendorDetails.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/vendor/pendingVendor.jsp" />
+	</definition>
+	
+	<definition name="showPenOEMDetails.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/vendor/showPenOEMDetails.jsp" />
+	</definition>
+	<definition name="addVendorDetails.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/vendor/addVendorDetails.jsp" />
+	</definition>
+	<definition name="vendorlist.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/vendor/vendorlist.jsp" />
+	</definition>
+	
+	<definition name="paymentpending.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/payment/paymentPending.jsp" />
+	</definition>
+	
+	<definition name="paymentrcvd.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/payment/paymentrcvd.jsp" />
+	</definition>
+	<definition name="invoicePending.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/invoice/invoicePending.jsp" />
+	</definition>
+	<definition name="invoicegenerated.def" extends="mainlayout.def">
+		<put-attribute name="title" value="Weatherforcast"
+			type="string" />
+		<put-attribute name="body" value="/jsp/invoice/invoiceGenerated.jsp" />
+	</definition>
+	 
+ </tiles-definitions>

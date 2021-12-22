@@ -1,0 +1,57 @@
+CREATE TABLE `SISL_emp_details` (
+  `Id` int(100) NOT NULL AUTO_INCREMENT,
+  `EmployeeName` varchar(100) DEFAULT NULL,
+  `EmpFatherName` varchar(100) DEFAULT NULL,
+  `EmpSalary` int(100) DEFAULT NULL,
+  `DateOfBirth` varchar(20) DEFAULT NULL,
+  `DateOfJoining` varchar(20) DEFAULT NULL,
+  `Address` varchar(100) DEFAULT NULL,
+  `EmailId` varchar(100) DEFAULT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+
+/*Data for the table `SISL_emp_details` */
+
+insert  into `SISL_emp_details`(`Id`,`EmployeeName`,`EmpFatherName`,`EmpSalary`,`DateOfBirth`,`DateOfJoining`,`Address`,`EmailId`,`time`) values (20,'mohan','T.C.Pant',20000,'12-12-1984','12-12-2009','Delhi','mohan@gmail.com','2010-10-09 17:36:00'),(21,'sohan','P.C.pant',20000,'12-12-1984','12-12-2009','Delhi','sohan@gmail.com','2010-10-09 17:36:00'),(22,'Mayur','M.M.ravat',12000,'01-01-1984','01-01-2010','delhi','mayur@gmail.com','2010-10-10 12:28:34'),(23,'sahil','P.K. pankaj',8000,'01-01-1986','01-01-2010','delhi','sahil@gmail.com','2010-10-10 12:28:34');
+
+/*Table structure for table `SISL_esic_emp_detail` */
+
+DROP TABLE IF EXISTS `SISL_esic_emp_detail`;
+
+CREATE TABLE `SISL_esic_emp_detail` (
+  `ID` int(100) NOT NULL AUTO_INCREMENT,
+  `SISLEmpID` int(100) DEFAULT NULL,
+  `ServiceMonth` varchar(100) DEFAULT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `CTC` int(100) DEFAULT NULL,
+  `EmployeeContribution` int(100) DEFAULT NULL,
+  `EmployerContribution` int(100) DEFAULT NULL,
+  `BasicSalary` int(100) DEFAULT NULL,
+  `PayableDays` int(100) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=latin1;
+
+/*Data for the table `SISL_esic_emp_detail` */
+
+insert  into `SISL_esic_emp_detail`(`ID`,`SISLEmpID`,`ServiceMonth`,`time`,`CTC`,`EmployeeContribution`,`EmployerContribution`,`BasicSalary`,`PayableDays`) values (75,20,'5-2010','2010-10-13 12:05:11',100,100,544,500,30),(76,21,'5-2010','2010-10-13 12:05:11',55,12,55,444,30),(77,22,'5-2010','2010-10-13 12:05:11',55,445,55,444,30),(78,23,'5-2010','2010-10-13 12:05:11',56,54,56,54,30);
+
+/*Table structure for table `SISL_salary_detail` */
+
+DROP TABLE IF EXISTS `SISL_salary_detail`;
+
+CREATE TABLE `SISL_salary_detail` (
+  `ID` int(100) NOT NULL AUTO_INCREMENT,
+  `CTC` int(100) DEFAULT NULL,
+  `EmployeeContribution` int(100) DEFAULT NULL,
+  `EmployerContribution` int(100) DEFAULT NULL,
+  `BasicSalary` int(100) DEFAULT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `ServiceMonth` varchar(100) DEFAULT NULL,
+  `NoofEmployee` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+
+/*Data for the table `SISL_salary_detail` */
+
+insert  into `SISL_salary_detail`(`ID`,`CTC`,`EmployeeContribution`,`EmployerContribution`,`BasicSalary`,`time`,`ServiceMonth`,`NoofEmployee`) values (29,266,611,710,1442,'2010-10-13 12:05:11','5-2010','4');
